@@ -1,0 +1,401 @@
+/* Обновлённые стили для хедера */
+.title__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0 2rem;
+  color: #000;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__logol {
+  width: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+
+.header__logo {
+  position: absolute;
+  top: 20px;
+  left: 5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(0, 80, 255);
+  cursor: pointer;
+  transition: all 0.5s;
+  padding: 0;
+  margin: 0;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(0, 60, 255);
+  border-radius: 10px;
+  width: 400px;
+  min-width: 300px;
+}
+
+.header__input {
+  border: none;
+  background: none;
+  padding: 9px;
+  width: 100%;
+  outline: none;
+}
+
+.header__butpoisk {
+  border: none;
+  background: rgb(0, 60, 255);
+  margin: 0;
+  padding: 0.6rem;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.conteiner__delayed {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__phone {
+  margin-bottom: 0.3rem;
+  transition: all 0.1s;
+}
+
+.delayed, .book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.1s;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.delayed:hover, .book:hover {
+  color: rgb(0, 60, 255);
+  background-color: #4444440f;
+}
+
+.delayed:active, .book:active {
+  opacity: 0.7;
+  background-color: rgba(54, 54, 54, 0.05);
+}
+
+.header__delayed, .header__book {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+  position: absolute;
+  top: 100%;
+  left: 50;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #c9e3ff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestion-item:active {
+  opacity: 0.5;
+}
+
+/* Стили для полосы прокрутки */
+.suggestions-list::-webkit-scrollbar {
+  width: 8px; /* Ширина вертикального скролла */
+  background-color: #f9f9f9; /* Цвет фона скролла */
+  border-radius: 5px;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 60, 255); /* Цвет бегунка */
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.suggestions-list::-webkit-scrollbar-track {
+  background-color: #c9e3ff; /* Цвет трека скролла */
+}
+
+
+@media (max-width: 1000px ) {
+  .title__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 2rem;
+    color: #000;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header__logol {
+    width: 40px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header__logo {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header__search {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 60, 255);
+    border-radius: 10px;
+    width: 400px;
+    min-width: 300px;
+  }
+  
+  .header__input {
+    border: none;
+    background: none;
+    padding: 9px;
+    width: 100%;
+    outline: none;
+  }
+  
+  .header__butpoisk {
+    border: none;
+    background: rgb(0, 60, 255);
+    margin: 0;
+    padding: 0.6rem;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .conteiner__delayed {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .header__phone {
+    margin-bottom: 0.3rem;
+    transition: all 0.1s;
+  }
+  
+  .delayed, .book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.1s;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .delayed:hover, .book:hover {
+    color: rgb(0, 60, 255);
+    background-color: #4444440f;
+  }
+  
+  .delayed:active, .book:active {
+    opacity: 0.7;
+    background-color: rgba(54, 54, 54, 0.05);
+  }
+  
+  .header__delayed, .header__book {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+}
+
+
+@media (max-width: 800px ) {
+  .title__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 2rem;
+    color: #000;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header__logol {
+    display: none;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header__logo {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header__search {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 60, 255);
+    border-radius: 10px;
+    width: 400px;
+    min-width: 300px;
+  }
+  
+  .header__input {
+    border: none;
+    background: none;
+    padding: 9px;
+    width: 100%;
+    outline: none;
+  }
+  
+  .header__butpoisk {
+    border: none;
+    background: rgb(0, 60, 255);
+    margin: 0;
+    padding: 0.6rem;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .conteiner__delayed {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .header__phone {
+    margin-bottom: 0.3rem;
+    transition: all 0.1s;
+  }
+  
+  .delayed, .book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.1s;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .delayed:hover, .book:hover {
+    color: rgb(0, 60, 255);
+    background-color: #4444440f;
+  }
+  
+  .delayed:active, .book:active {
+    opacity: 0.7;
+    background-color: rgba(54, 54, 54, 0.05);
+  }
+  
+  .header__delayed, .header__book {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .suggestions-list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #c9e3ff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+  }
+  
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .suggestion-item:active {
+    opacity: 0.5;
+  }
+  
+}
