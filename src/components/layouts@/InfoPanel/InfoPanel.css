@@ -1,0 +1,478 @@
+.cont {
+  display: flex;
+  width: 100%;
+  height: 543px;
+	background: #12121c;
+}
+
+.container-info {
+  width: 50%; 
+  height: 100%;
+  z-index: 1;
+}
+
+.figure1 {
+	position: absolute;
+	bottom: 195px;
+	left: 680px;
+	border-radius: 40% 30px 40% 30px;
+	transform: rotate(240deg);
+	background-color: rgb(255, 190, 0);
+	width: 200px;
+	height: 250px;
+	z-index: 1;
+}
+
+.figure2 {
+	position: absolute;
+	bottom: 330px;
+	left: 911px;
+	border-radius: 30px 40% 30px 40%;
+	transform: rotate(240deg);
+	background-color: rgb(255, 190, 0);
+	width: 200px;
+	height: 250px;
+	z-index: 1;
+}
+
+.figure3 {
+	position: absolute;
+	bottom: 10px;
+	left: 790px;
+	border-radius: 30px 40% 30px 40%;
+	transform: rotate(240deg);
+	background-color: rgb(255, 190, 0);
+	width: 200px;
+	height: 250px;
+	z-index: 1;
+}
+
+.figure4 {
+	position: absolute;
+	bottom: 140px;
+	left: 1020px;
+	border-radius: 40% 30px 40% 40px;
+	transform: rotate(240deg);
+	background-color: rgb(255, 190, 0);
+	width: 200px;
+	height: 250px;
+	z-index: 1;
+}
+
+.container-img {
+	position: relative;
+  width: 50%; 
+  height: 100%;
+  background: url('../../../My IMG/MainLogojj.png') no-repeat 40px -130px;
+  background-size: cover;
+	z-index: 2;
+}
+
+.info-discriptoin {
+	margin: 3rem;
+	color: #fff;
+}
+
+.info-title {
+	margin: 3rem;
+	color: rgb(255, 190, 0);
+}
+
+.telegram-icon {
+	color: rgb(255, 190, 0);
+	font-size: 2.5rem;
+	margin: 3rem;
+	transition: all 0.5s ease-in-out;
+}
+
+.git-icon, .phone-icon, .discord-icon {
+	color: rgb(255, 190, 0);
+	font-size: 2.5rem;
+	margin: 3rem 3rem 3rem 0;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+
+.telegram-icon:hover, .git-icon:hover, .phone-icon:hover, .discord-icon:hover {
+	color: #fff;
+}
+
+.telegram-icon:active, .git-icon:active, .phone-icon:active, .discord-icon:active {
+	opacity: 0.4;
+}
+
+.telegram-link, .git-link, .phone-link, .discord-link {
+	opacity: 0;
+	animation: fade-in 1.5s ease forwards;
+}
+
+.buttin-info {
+	margin: 0.5rem;
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 900;
+  font-weight: normal;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition: all 0.3s;
+  cursor: pointer;  
+	display: block;
+	position: relative;
+	left: -10px;
+}
+
+.buttin-info:hover {
+	color: rgb(255, 190, 0);
+	border-bottom: 1px solid rgb(255, 190, 0);
+}
+
+.buttin-info:active {
+	opacity: 0.5;
+}
+
+.arrow-dis {
+	position: relative;
+	top: 2.3px;
+	left: 0px;
+}
+
+@keyframes fade-in {
+	0% {
+		position: relative;
+		opacity: 0;
+		top: 10px;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		position: relative;
+		top: 0;
+		transform: translateY(0px);
+	}
+}
+
+
+@media (max-width: 780px) {
+
+	.cont {
+		display: flex;
+		width: 100%;
+		height: 543px;
+		background: #12121c;
+	}
+	
+	.container-info {
+		width: 50%; 
+		height: 100%;
+		z-index: 1;
+	}
+	
+	.figure1 {
+		position: absolute;
+		bottom: 195px;
+		left: 680px;
+		border-radius: 40% 30px 40% 30px;
+		transform: rotate(240deg);
+		background-color: rgb(255, 190, 0);
+		width: 200px;
+		height: 250px;
+		z-index: 1;
+		display: none;
+	}
+	
+	.figure2 {
+		display: none;
+		position: absolute;
+		bottom: 330px;
+		left: 911px;
+		border-radius: 30px 40% 30px 40%;
+		transform: rotate(240deg);
+		background-color: rgb(255, 190, 0);
+		width: 200px;
+		height: 250px;
+		z-index: 1;
+	}
+	
+	.figure3 {
+		display: none;
+		position: absolute;
+		bottom: 10px;
+		left: 790px;
+		border-radius: 30px 40% 30px 40%;
+		transform: rotate(240deg);
+		background-color: rgb(255, 190, 0);
+		width: 200px;
+		height: 250px;
+		z-index: 1;
+	}
+	
+	.figure4 {
+		display: none;
+		position: absolute;
+		bottom: 140px;
+		left: 1020px;
+		border-radius: 40% 30px 40% 40px;
+		transform: rotate(240deg);
+		background-color: rgb(255, 190, 0);
+		width: 200px;
+		height: 250px;
+		z-index: 1;
+	}
+	
+	.container-img {
+		position: relative;
+		width: 50%; 
+		height: 100%;
+		background: url('../../../My IMG/MainLogojj.png') no-repeat 40px -130px;
+		background-size: cover;
+		z-index: 2;
+	}
+	
+	.info-discriptoin {
+		margin: 1rem;
+		color: #fff;
+	}
+	
+	.info-title {
+		margin: 2rem 1rem 1rem 1rem;
+		color: rgb(255, 190, 0);
+	}
+	
+	.telegram-icon {
+		color: rgb(255, 190, 0);
+		font-size: 2.5rem;
+		margin: 0.5rem;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	.git-icon, .phone-icon, .discord-icon {
+		color: rgb(255, 190, 0);
+		font-size: 2.5rem;
+		margin: 0.5rem 0.5rem 0.5rem 0;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	.telegram-icon:hover, .git-icon:hover, .phone-icon:hover, .discord-icon:hover {
+		color: #fff;
+	}
+	
+	.telegram-icon:active, .git-icon:active, .phone-icon:active, .discord-icon:active {
+		opacity: 0.4;
+	}
+	
+	.telegram-link, .git-link, .phone-link, .discord-link {
+		opacity: 0;
+		animation: fade-in 1.5s ease forwards;
+	}
+	
+	.buttin-info {
+		margin: 0.5rem;
+		background: none;
+		border: none;
+		color: rgb(255, 255, 255);
+		font-size: 18px;
+		font-weight: 900;
+		font-weight: normal;
+		border-bottom: 1px solid rgb(255, 255, 255);
+		transition: all 0.3s;
+		cursor: pointer;  
+		display: block;
+		position: relative;
+		left: -10px;
+	}
+	
+	.buttin-info:hover {
+		color: rgb(255, 190, 0);
+		border-bottom: 1px solid rgb(255, 190, 0);
+	}
+	
+	.buttin-info:active {
+		opacity: 0.5;
+	}
+	
+	.arrow-dis {
+		position: relative;
+		top: 2.3px;
+		left: 0px;
+	}
+	
+	@keyframes fade-in {
+		0% {
+			position: relative;
+			opacity: 0;
+			top: 10px;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			position: relative;
+			top: 0;
+			transform: translateY(0px);
+		}
+ }
+}
+
+
+@media (max-width: 500px) {
+
+	.cont {
+		display: flex;
+		width: 90%;
+		height: 543px;
+		background: #12121c;
+	}
+	
+	.container-info {
+		width: 100%; 
+		height: 100%;
+		z-index: 1;
+	}
+	
+	.figure1 {
+		position: absolute;
+		bottom: 195px;
+		left: 680px;
+		border-radius: 40% 30px 40% 30px;
+		transform: rotate(240deg);
+		background-color: rgb(255, 190, 0);
+		width: 200px;
+		height: 250px;
+		z-index: 1;
+		display: none;
+	}
+	
+	.figure2 {
+		display: none;
+		position: absolute;
+		bottom: 330px;
+		left: 911px;
+		border-radius: 30px 40% 30px 40%;
+		transform: rotate(240deg);
+		background-color: rgb(255, 190, 0);
+		width: 200px;
+		height: 250px;
+		z-index: 1;
+	}
+	
+	.figure3 {
+		display: none;
+		position: absolute;
+		bottom: 10px;
+		left: 790px;
+		border-radius: 30px 40% 30px 40%;
+		transform: rotate(240deg);
+		background-color: rgb(255, 190, 0);
+		width: 200px;
+		height: 250px;
+		z-index: 1;
+	}
+	
+	.figure4 {
+		display: none;
+		position: absolute;
+		bottom: 140px;
+		left: 1020px;
+		border-radius: 40% 30px 40% 40px;
+		transform: rotate(240deg);
+		background-color: rgb(255, 190, 0);
+		width: 200px;
+		height: 250px;
+		z-index: 1;
+	}
+	
+	.container-img {
+		display: none;
+		position: relative;
+		width: 50%; 
+		height: 100%;
+		background: url('../../../My IMG/MainLogojj.png') no-repeat 40px -130px;
+		background-size: cover;
+		z-index: 2;
+	}
+	
+	.info-discriptoin {
+		margin: 1rem;
+		color: #fff;
+	}
+	
+	.info-title {
+		margin: 2rem 1rem 1rem 1rem;
+		color: rgb(255, 190, 0);
+	}
+	
+	.telegram-icon {
+		color: rgb(255, 190, 0);
+		font-size: 2.5rem;
+		margin: 0.5rem;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	.git-icon, .phone-icon, .discord-icon {
+		color: rgb(255, 190, 0);
+		font-size: 2.5rem;
+		margin: 0.5rem 0.5rem 0.5rem 0;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	}
+	
+	.telegram-icon:hover, .git-icon:hover, .phone-icon:hover, .discord-icon:hover {
+		color: #fff;
+	}
+	
+	.telegram-icon:active, .git-icon:active, .phone-icon:active, .discord-icon:active {
+		opacity: 0.4;
+	}
+	
+	.telegram-link, .git-link, .phone-link, .discord-link {
+		opacity: 0;
+		animation: fade-in 1.5s ease forwards;
+	}
+	
+	.buttin-info {
+		margin: 0.5rem;
+		background: none;
+		border: none;
+		color: rgb(255, 255, 255);
+		font-size: 18px;
+		font-weight: 900;
+		font-weight: normal;
+		border-bottom: 1px solid rgb(255, 255, 255);
+		transition: all 0.3s;
+		cursor: pointer;  
+		display: block;
+		position: relative;
+		left: -10px;
+	}
+	
+	.buttin-info:hover {
+		color: rgb(255, 190, 0);
+		border-bottom: 1px solid rgb(255, 190, 0);
+	}
+	
+	.buttin-info:active {
+		opacity: 0.5;
+	}
+	
+	.arrow-dis {
+		position: relative;
+		top: 2.3px;
+		left: 0px;
+	}
+	
+	@keyframes fade-in {
+		0% {
+			position: relative;
+			opacity: 0;
+			top: 10px;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			position: relative;
+			top: 0;
+			transform: translateY(0px);
+		}
+ }
+}

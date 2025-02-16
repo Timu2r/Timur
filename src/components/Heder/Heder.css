@@ -1,401 +1,266 @@
-/* Обновлённые стили для хедера */
+/* Базовые стили для хедера */
 .title__header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  height: 100px;
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
-  background-color: #ffffff;
-  padding: 0 2rem;
-  color: #000;
-  box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #0a0a12;
+  padding: 0 1rem;
+  box-shadow: 0px 0px 5px 8px #0a0a12;
 }
 
-.header__logol {
-  width: 40px;
-  padding: 0;
-  margin: 0;
+.header__buttons {
+  display: flex;
+  width: 92%;
+  gap: 1rem;
+  justify-content: right;
+  align-items: center;
 }
 
-
-.header__logo {
-  position: absolute;
-  top: 20px;
-  left: 5rem;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: rgb(0, 80, 255);
+.main__logo {
+  font-size: 40px;
+  color: rgb(255, 190, 0);
   cursor: pointer;
   transition: all 0.5s;
-  padding: 0;
-  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.header__search {
-  display: flex;
-  align-items: center;
-  border: 2px solid rgb(0, 60, 255);
-  border-radius: 10px;
-  width: 400px;
-  min-width: 300px;
+.main__logo:hover {
+  filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.549));
 }
 
-.header__input {
-  border: none;
-  background: none;
-  padding: 9px;
-  width: 100%;
-  outline: none;
-}
-
-.header__butpoisk {
-  border: none;
-  background: rgb(0, 60, 255);
-  margin: 0;
-  padding: 0.6rem;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.conteiner__delayed {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.header__phone {
-  margin-bottom: 0.3rem;
-  transition: all 0.1s;
-}
-
-.delayed, .book {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.1s;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.delayed:hover, .book:hover {
-  color: rgb(0, 60, 255);
-  background-color: #4444440f;
-}
-
-.delayed:active, .book:active {
+.main__logo:active {
   opacity: 0.7;
-  background-color: rgba(54, 54, 54, 0.05);
 }
 
-.header__delayed, .header__book {
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.5s;
+.header__button {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;  
+  margin: 0rem;
 }
 
-.suggestions-list {
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-  display: flex;
-  flex-direction: column; 
-  position: absolute;
-  top: 100%;
-  left: 50;
-  width: 100%;
-  max-height: 200px;
-  overflow-y: auto;
-  background-color: #c9e3ff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+.header__button:hover {
+  color: rgb(255, 190, 0);
 }
 
-.suggestion-item {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.suggestion-item:hover {
-  background-color: #f0f0f0;
-}
-
-.suggestion-item:active {
+.header__button:active {
   opacity: 0.5;
 }
 
-/* Стили для полосы прокрутки */
-.suggestions-list::-webkit-scrollbar {
-  width: 8px; /* Ширина вертикального скролла */
-  background-color: #f9f9f9; /* Цвет фона скролла */
-  border-radius: 5px;
+.header__button.active {
+  color: rgb(255, 190, 0);
 }
 
-.suggestions-list::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 60, 255); /* Цвет бегунка */
-  border-radius: 5px;
-  transition: all 0.5s;
+/* Кнопка телефона */
+.icon__phone-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: rgb(0, 60, 255);
+  color: white;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  transition: all 0.3s ease-in-out;
 }
 
-.suggestions-list::-webkit-scrollbar-track {
-  background-color: #c9e3ff; /* Цвет трека скролла */
+.icon__phone-button:hover {
+  background-color: rgb(0, 50, 200);
 }
 
-
-@media (max-width: 1000px ) {
+/* Адаптация для планшетов */
+@media (max-width: 768px) {
   .title__header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    height: 100px;
+    height: 80px;
     display: flex;
-    justify-content: space-between;
+  
     align-items: center;
-    background-color: #ffffff;
-    padding: 0 2rem;
-    color: #000;
-    box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #0a0a12;
+    padding: 0 1rem;
+    box-shadow: 0px 0px 5px 8px #0a0a12;
   }
   
-  .header__logol {
-    width: 40px;
-    padding: 0;
-    margin: 0;
+  .header__buttons {
+    display: flex;
+    width: 10%;
+    gap: 1rem;
+    justify-content: right;
+    align-items: center;
   }
-
-  .header__logo {
-    display: none;
-    position: absolute;
-    top: 20px;
-    left: 5rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: rgb(255, 0, 0);
+  
+  .main__logo {
+    width: 50%;
+    font-size: 40px;
+    color: rgb(255, 190, 0);
     cursor: pointer;
     transition: all 0.5s;
-    padding: 0;
-    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   }
   
-  .header__search {
-    display: flex;
-    align-items: center;
-    border: 2px solid rgb(0, 60, 255);
-    border-radius: 10px;
-    width: 400px;
-    min-width: 300px;
+  .main__logo:hover {
+    filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.549));
   }
   
-  .header__input {
-    border: none;
-    background: none;
-    padding: 9px;
-    width: 100%;
-    outline: none;
-  }
-  
-  .header__butpoisk {
-    border: none;
-    background: rgb(0, 60, 255);
-    margin: 0;
-    padding: 0.6rem;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .conteiner__delayed {
-    display: none;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .header__phone {
-    margin-bottom: 0.3rem;
-    transition: all 0.1s;
-  }
-  
-  .delayed, .book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.1s;
-    padding: 5px;
-    border-radius: 10px;
-  }
-  
-  .delayed:hover, .book:hover {
-    color: rgb(0, 60, 255);
-    background-color: #4444440f;
-  }
-  
-  .delayed:active, .book:active {
+  .main__logo:active {
     opacity: 0.7;
-    background-color: rgba(54, 54, 54, 0.05);
   }
   
-  .header__delayed, .header__book {
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    font-size: 12px;
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-  
-}
-
-
-@media (max-width: 800px ) {
-  .title__header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 0 2rem;
-    color: #000;
-    box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header__logol {
-    display: none;
-    width: 40px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .header__logo {
-    display: none;
-    position: absolute;
-    top: 20px;
-    left: 5rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: rgb(255, 0, 0);
-    cursor: pointer;
-    transition: all 0.5s;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .header__search {
-    display: flex;
-    align-items: center;
-    border: 2px solid rgb(0, 60, 255);
-    border-radius: 10px;
-    width: 400px;
-    min-width: 300px;
-  }
-  
-  .header__input {
-    border: none;
+  .header__button {
     background: none;
-    padding: 9px;
-    width: 100%;
-    outline: none;
-  }
-  
-  .header__butpoisk {
     border: none;
-    background: rgb(0, 60, 255);
-    margin: 0;
-    padding: 0.6rem;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;  
+    margin: 0rem;
   }
   
-  .conteiner__delayed {
-    display: none;
-    align-items: center;
-    gap: 1.5rem;
+  .header__button:hover {
+    color: rgb(255, 190, 0);
   }
   
-  .header__phone {
-    margin-bottom: 0.3rem;
-    transition: all 0.1s;
-  }
-  
-  .delayed, .book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.1s;
-    padding: 5px;
-    border-radius: 10px;
-  }
-  
-  .delayed:hover, .book:hover {
-    color: rgb(0, 60, 255);
-    background-color: #4444440f;
-  }
-  
-  .delayed:active, .book:active {
-    opacity: 0.7;
-    background-color: rgba(54, 54, 54, 0.05);
-  }
-  
-  .header__delayed, .header__book {
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    font-size: 12px;
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-
-  .suggestions-list {
-    list-style: none;
-    margin: 0;
-    display: flex;
-    flex-direction: column; 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    background-color: #c9e3ff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-  }
-  
-  .suggestion-item {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .suggestion-item:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .suggestion-item:active {
+  .header__button:active {
     opacity: 0.5;
   }
+
+  .header__button.active {
+    color: rgb(255, 190, 0);
+  }
   
+  /* Кнопка телефона */
+  .icon__phone-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: rgb(0, 60, 255);
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .icon__phone-button:hover {
+    background-color: rgb(0, 50, 200);
+  }
+}
+
+@media (max-width: 370px) {
+  .title__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+  
+    align-items: center;
+    background-color: #0a0a12;
+    padding: 0 1rem;
+    box-shadow: 0px 0px 5px 8px #0a0a12;
+  }
+  
+  .header__buttons {
+    display: flex;
+    width: 60%;
+    gap: 1rem;
+    justify-content: right;
+    align-items: center;
+  }
+  
+  .main__logo {
+    display: none;
+    width: 50%;
+    font-size: 40px;
+    color: rgb(255, 190, 0);
+    cursor: pointer;
+    transition: all 0.5s;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  
+  .main__logo:hover {
+    filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.549));
+  }
+  
+  .main__logo:active {
+    opacity: 0.7;
+  }
+  
+  .header__button {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;  
+    margin: 0rem;
+  }
+  
+  .header__button:hover {
+    color: rgb(255, 190, 0);
+  }
+  
+  .header__button:active {
+    opacity: 0.5;
+  }
+
+  .header__button.active {
+    color: rgb(255, 190, 0);
+  }
+  
+  /* Кнопка телефона */
+  .icon__phone-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: rgb(0, 60, 255);
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .icon__phone-button:hover {
+    background-color: rgb(0, 50, 200);
+  }
 }

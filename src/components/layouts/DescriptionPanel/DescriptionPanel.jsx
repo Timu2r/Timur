@@ -2,7 +2,7 @@ import './DescriptionPanel.css';
 import { useEffect } from 'react';
 
 export default function DescriptionPanel({ book, onBackClick }) {
-  if (!book) return null; // Если книги нет, ничего не показываем
+  if (!book) return null;
 
     useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

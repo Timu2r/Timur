@@ -1,61 +1,49 @@
-import { useState } from 'react';
-import Header from './components/Heder/Header.jsx';
-import AllBooks from './components/layouts/AllBooks/AllBooks.jsx';
-import DramaBooks from './components/layouts/DramaBooks/DramaBooks.jsx';
-import FictionBooks from './components/layouts/FictionBooks/FictionBooks.jsx';
-import ProgrammingBooks from './components/layouts/ProgrammingBooks/ProgrammingBooks.jsx';
-import MangaBooks from './components/layouts/MangaBooks/MangaBooks.jsx';
-import DescriptionPanel from './components/layouts/DescriptionPanel/DescriptionPanel.jsx';
-import SearchResults from './components/SearchResults/SearchResults.jsx';
-import Footer from './components/layouts/footer/footer.jsx';
-import './App.css';
+import { useState, useRef } from 'react' // Добавлен useState
+import Header from './components/Heder/Header.jsx'
+import './App.css'
+import InfoPanel from './components/layouts@/InfoPanel/InfoPanel.jsx'
+import NewFoto from './components/layouts@/New Foto/NewFoto.jsx'
+import DescriptionPanel from './components/layouts@/DiscriptionPanel/DiscriptionPanel.jsx'
+import Footer from './components/layouts@/footer/footer.jsx'
+import GalaryPanel from './components/layouts@/GalaryPanel/GalaryPanel.jsx'
 
 function App() {
-  const [tab, setTab] = useState('main');
-  const [selectedBook, setSelectedBook] = useState(null);
-  const [searchResults, setSearchResults] = useState([]); // Состояние для хранения результатов поиска
+	const [tab, setTab] = useState('main') 
 
-  const handleBackClick = () => {
-    setTab('main');
-    setSelectedBook(null);
-  };
+	const discRef = useRef(null)
 
-  const handleBookClick = (book) => {
-    setSelectedBook(book);
-    setTab('DescriptionPanel');
-  };
+	const offsets = {
+		dis: -100,
+	}
 
-  const handleSearchResults = (results) => {
-    setSearchResults(results);
-    setTab('SearchResults'); // Переход к панели с результатами поиска
-  };
+	const handleScroll = (ref, panel) => {
+		if (ref && ref.current) {
+			const yOffset = offsets[panel] || 0
+			const yPosition =
+				ref.current.getBoundingClientRect().top + window.scrollY + yOffset
+			window.scrollTo({ top: yPosition, behavior: 'smooth' })
+		}
+	}
 
-  return (
-    <div className='app' >
-      <Header onBookSelect={handleBookClick} onSearchResults={handleSearchResults} />
-      
-      {tab === 'main' && (
-        <>
-          <AllBooks activeTab={tab} onTabChange={setTab} onBookClick={handleBookClick} />
-          <DramaBooks activeTab={tab} onTabChange={setTab} onBookClick={handleBookClick} />
-          <FictionBooks activeTab={tab} onTabChange={setTab} onBookClick={handleBookClick} />
-          <ProgrammingBooks activeTab={tab} onTabChange={setTab} onBookClick={handleBookClick} />
-          <MangaBooks activeTab={tab} onTabChange={setTab} onBookClick={handleBookClick} />
-        </>
-      )}
+	return (
+		<>
+			<Header active={tab} onChange={setTab} />
 
-      {tab === 'DescriptionPanel' && (
-        <DescriptionPanel book={selectedBook} onBackClick={handleBackClick} />
-      )}
+			{tab === 'main' && (
+				<>
+					<InfoPanel scrollDis={handleScroll} refs={{ discRef }} />
+					<NewFoto />
+					<div ref={discRef}>
+						<DescriptionPanel />
+					</div>
+				</>
+			)}
 
-      {tab === 'SearchResults' && (
-        <SearchResults books={searchResults} onBookSelect={handleBookClick} />
-      )}
+			{tab === 'galary' && <GalaryPanel />}
 
-      <Footer />
-
-    </div>
-  );
+			<Footer />
+		</>
+	)
 }
 
-export default App;
+export default App
